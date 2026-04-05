@@ -1,140 +1,168 @@
 <!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Machine Learning Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <style>
+      :root {
+        --bg-1: #f8fbff;
+        --bg-2: #f3f8ff;
+        --bg-3: #eef4ff;
+        --panel: rgba(255, 255, 255, 0.82);
+        --line: #d8e3f2;
+        --text: #243447;
+        --muted: #6f8198;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        font-family: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+        color: var(--text);
+        background: linear-gradient(160deg, #f8fbff 0%, #f3f8ff 55%, #eef4ff 100%);
+        min-height: 100vh;
+        line-height: 1.6;
+      }
+      a { color: inherit; }
+      .label { display: none; }
+      #wrapper { width: min(1100px, 92vw); margin: 0 auto; padding: 1.2rem 0 3rem; }
+      #nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+        padding: 1rem 1.2rem;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--panel);
+        position: sticky;
+        top: 0.75rem;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 6px 18px rgba(60, 90, 140, 0.12);
+      }
+      #nav ul { list-style: none; padding: 0; margin: 0; }
+      #nav .links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+      #nav .links a {
+        text-decoration: none;
+        font-size: 0.95rem;
+        color: var(--muted);
+        padding: 0.45rem 0.8rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+      }
+      #nav .links .active a,
+      #nav .links a:hover {
+        color: var(--text);
+        border-color: #bfd0e8;
+        background: #e6f0ff;
+      }
+      #nav .icons { display: flex; align-items: center; gap: 0.7rem; }
+      #nav .icons a {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid #bfd0e8;
+        display: inline-grid;
+        place-items: center;
+        text-decoration: none;
+      }
+      #main { display: grid; gap: 1rem; }
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--panel);
+        padding: 1.2rem;
+      }
+      .card h2 { margin-top: 0; text-align: center; }
+      .card p { color: #4f6075; }
+      .image { display: block; border-radius: 12px; overflow: hidden; margin: 0.9rem 0; }
+      .image img { width: 100%; height: auto; display: block; }
+      .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 12px;
+        padding: 0.62rem 0.95rem;
+        border: 1px solid #bfd0e8;
+        text-decoration: none;
+        font-weight: 600;
+        background: #edf4ff;
+      }
+      .actions { margin-top: 0.8rem; display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap; }
+      @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+      @media (max-width: 720px) { #nav { flex-direction: column; align-items: flex-start; } }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <nav id="nav">
+        <ul class="links">
+          <li><a href="index.html">About Me</a></li>
+          <li><a href="vision.html">Computer Vision</a></li>
+          <li class="active"><a href="ml.html">Machine Learning</a></li>
+          <li><a href="planning.html">Path Planning</a></li>
+          <li><a href="ros.html">ROS/C++</a></li>
+          <li><a href="controls.html">Controls</a></li>
+        </ul>
+        <ul class="icons">
+          <li><a href="https://www.linkedin.com/in/saurabhpalande/" class="fab fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+          <li><a href="https://github.com/saurabhp369" class="fab fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+        </ul>
+      </nav>
 
-<html>
-	<head>
-		<title>Saurabh Palande</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+      <div id="main">
+        <article class="card">
+          <h2>Dueling Double DQN based Autonomous Vehicle Overtaking</h2>
+          <p>Implement and Trained a ueling Double DQN (Deep Q-Learning Network) to overtake cars in a 3 lane scenario on highways.</p>
+          <a href="#" class="image"><img src="images/episode_400.gif" alt="Dueling Double DQN" /></a>
+          <div class="actions">
+            <a href="https://github.com/saurabhp369/-Autonomous-Vehicle-overtake-using-Dueling-Double-DQN" class="button">View Project</a>
+            <a href="https://drive.google.com/file/d/18X4ysVLBYwNWb7MdbOMmfhgPXBrBBAR-/view?usp=share_link" class="button">YouTube</a>
+            <a href="https://docs.google.com/presentation/d/1d4FuJB21Xt9LFXBmewEPCYVqDcJRhvXKuaBobqFWmBA/edit?usp=share_link" class="button">Slides</a>
+          </div>
+        </article>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+        <section class="grid">
+          <article class="card">
+            <h2>3D Super-Resolution of CT and MRI Scans using CNN</h2>
+            <a href="#" class="image"><img src="images/ml_2.jpg" alt="3D super-resolution" /></a>
+            <p>Implemented and Trained the CNN-IL algorithm in the existing IEEE journal paper on IXI dataset. Proposed and Trained improved custom networks for super-resolution in height-and-width and depth directions in PyTorch by rewiring skip connections, adding ELU activations and adding more layers. Improved SSIM and PSNR using the above custom network.</p>
+            <div class="actions"><a href="https://github.com/saurabhp369/3D-MRI-CNN-Super-Resolution" class="button">View Project</a></div>
+          </article>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Saurabh Palande</h1>
-						<p>I am a graduate student at the University of Maryland, College Park, pursuing my Professional Master’s 
-							degree in Robotics (M. Eng. Robotics) and expecting to graduate by May 2023. My expertise lies in 
-							Computer Vision, Autonomous navigation, Robotic Manipulators, and Industrial Automation<br/>
-						   </p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+          <article class="card">
+            <h2>Handwritten Digit Recognition</h2>
+            <a href="#" class="image"><img src="images/ml_3.jpg" alt="Digit recognition" /></a>
+            <p>Implemented Logistic Regression, Kernel SVM with PCA, MDA and LeNet-5 CNN from scratch to identify/classify handwritten digits.</p>
+            <div class="actions"><a href="https://github.com/saurabhp369/Logistic_Regression_MNIST" class="button">View Project</a></div>
+          </article>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="https://drive.google.com/file/d/181HIZe7yaBixIs6VdSQa10L0iqOWFUnG/view?usp=share_link" target="_blank" class="logo primary icon solid fa-download">Resume</a>
-					</header>
+          <article class="card">
+            <h2>Face recognition</h2>
+            <a href="#" class="image"><img src="images/ml_4.jpg" alt="Face recognition" /></a>
+            <p>Implemented advanced machine learning algorithms, including Bayes' Classifier, kNN Classifier, Boosted SVM, and kernel SVM (using linear, polynomial, and RBF kernel), for face recognition without using in-built functions. Applied PCA and MDA to further improve prediction accuracy.</p>
+            <div class="actions"><a href="https://github.com/saurabhp369/Face_Recognition" class="button">View Project</a></div>
+          </article>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							
-							<li ><a href="index.html">About Me</a></li>
-							<li><a href="vision.html">Computer Vision</a></li>
-							<li class="active"><a href="ml.html">Machine Learning</a></li>
-							<li><a href="planning.html">Path Planning</a></li>
-							<li><a href="ros.html">ROS/C++</a></li>
-							<li><a href="controls.html">Controls</a></li>
-						</ul>
-						<ul class="icons">
-							<!-- <li><a href="#" class="button primary icon solid fa-download">Resume</a></li> -->
-							<li><a href="https://www.linkedin.com/in/saurabhpalande/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/saurabhp369" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					
-			  
-					<div id="main">
-							
-						<!-- Featured Post -->
-							<article class="post featured">
-								
-								<header class="major">
-									<h2><a href="#">Dueling Double DQN based Autonomous Vehicle Overtaking</a></h2>
-									<p>Implement and Trained a ueling Double DQN (Deep Q-Learning Network) to overtake cars in a 3 lane scenario on highways.</p>
-								</header>
-								<a href="#" class="image main"><img src="images/episode_400.gif" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/saurabhp369/-Autonomous-Vehicle-overtake-using-Dueling-Double-DQN" class="button large">View Project</a></li>
-								</ul>
-								<ul class="icons alt">
-									<li><a href="https://drive.google.com/file/d/18X4ysVLBYwNWb7MdbOMmfhgPXBrBBAR-/view?usp=share_link" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
-								</ul>
-								<ul class="icons alt">
-									<li><a href="https://docs.google.com/presentation/d/1d4FuJB21Xt9LFXBmewEPCYVqDcJRhvXKuaBobqFWmBA/edit?usp=share_link" class="fas fa-presentation"><span class="label">Slides</span></a></li>
-								</ul>
-							</article>
-
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<h2><a href="#">3D Super-Resolution of CT and MRI Scans using CNN</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/ml_2.jpg" alt="" /></a>
-									<p>Implemented and Trained the CNN-IL algorithm in the existing IEEE journal paper on IXI dataset. Proposed and Trained improved custom networks for super-resolution in height-and-width and depth directions in PyTorch by rewiring skip connections, adding ELU activations and adding more layers. Improved SSIM and PSNR using the above custom network.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/saurabhp369/3D-MRI-CNN-Super-Resolution" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-										<h2><a href="#">Handwritten Digit Recognition</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/ml_3.jpg" alt="" /></a>
-									<p>Implemented Logistic Regression, Kernel SVM with PCA, MDA and LeNet-5 CNN from scratch to identify/classify handwritten digits.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/saurabhp369/Logistic_Regression_MNIST" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-										<h2><a href="#">Face recognition</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/ml_4.jpg" alt="" /></a>
-									<p>Implemented advanced machine learning algorithms, including Bayes' Classifier, kNN Classifier, Boosted SVM,
-										and kernel SVM (using linear, polynomial, and RBF kernel), for face recognition without using in-built functions.
-										Applied PCA to the dataset to find directions that maximize the variance and MDA to find the directions that
-										maximize the separation between classes to further improve the prediction accuracy.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/saurabhp369/Face_Recognition" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-										<h2><a href="#">Fine grain classification using Transfer Learning</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/tf.jpg" alt="" /></a>
-									<p>Implemented transfer learning using VGG to classify among 10 different species of monkeys, thus increasing the
-										accuracy from 20.18% to 83.09%.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/saurabhp369/Transfer_Learning" class="button">View Project</a></li>
-									</ul>
-								</article>
-							</section>
-
-					</div>
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+          <article class="card">
+            <h2>Fine grain classification using Transfer Learning</h2>
+            <a href="#" class="image"><img src="images/tf.jpg" alt="Transfer learning" /></a>
+            <p>Implemented transfer learning using VGG to classify among 10 different species of monkeys, thus increasing the accuracy from 20.18% to 83.09%.</p>
+            <div class="actions"><a href="https://github.com/saurabhp369/Transfer_Learning" class="button">View Project</a></div>
+          </article>
+        </section>
+      </div>
+    </div>
+  </body>
 </html>

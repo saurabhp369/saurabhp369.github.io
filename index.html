@@ -1,209 +1,678 @@
 <!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Saurabh Palande</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <style>
+      :root {
+        --bg-1: #f8fbff;
+        --bg-2: #f3f8ff;
+        --bg-3: #eef4ff;
+        --panel: rgba(255, 255, 255, 0.82);
+        --panel-strong: rgba(232, 240, 250, 0.95);
+        --line: #d8e3f2;
+        --text: #243447;
+        --muted: #6f8198;
+        --accent: #87a8d8;
+        --accent-alt: #a2bce3;
+        --danger: #a2bce3;
+      }
 
-<html>
-	<head>
-		<title>Saurabh Palande</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+      * {
+        box-sizing: border-box;
+      }
 
-		<!-- Wrapper -->
-		<div id="wrapper" class="fade-in">
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
-			<!-- Intro -->
-				<div id="intro">
-					<h1>Saurabh Palande</h1>
-					<p>I am a graduate student at the University of Maryland, College Park, pursuing my Professional Master’s 
-						degree in Robotics (M. Eng. Robotics) and expecting to graduate by May 2023. My expertise lies in 
-						Computer Vision, Autonomous navigation, Robotic Manipulators, and Industrial Automation<br/>
-					   </p>
-					<ul class="actions">
-						<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-					</ul>
-				</div>
+      body {
+        font-family: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+        color: var(--text);
+        background: linear-gradient(160deg, #f8fbff 0%, #f3f8ff 55%, #eef4ff 100%);
+        min-height: 100vh;
+        line-height: 1.6;
+      }
 
-			<!-- Header -->
-				<header id="header">
-					<a href="https://drive.google.com/file/d/181HIZe7yaBixIs6VdSQa10L0iqOWFUnG/view?usp=share_link" target="_blank" class="logo primary icon solid fa-download">Resume</a>
-				</header>
+      a {
+        color: inherit;
+      }
 
-				<!-- Nav -->
-				<nav id="nav">
-					<ul class="links">
-						
-						<li class="active"><a href="index.html">About Me</a></li>
-						<li><a href="vision.html">Computer Vision</a></li>
-						<li ><a href="ml.html">Machine Learning</a></li>
-						<li><a href="planning.html">Path Planning</a></li>
-						<li><a href="ros.html">ROS/C++</a></li>
-						<li><a href="controls.html">Controls</a></li>
-					</ul>
-					<ul class="icons">
-						<!-- <li><a href="#" class="button primary icon solid fa-download">Resume</a></li> -->
-						<li><a href="https://www.linkedin.com/in/saurabhpalande/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/saurabhp369" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-					</ul>
-				</nav>
+      .label {
+        display: none;
+      }
 
-				<!-- Main -->
-					
-					<div id="main">
-						<div class="education">
-						<h2><i class="fas fa-graduation-cap"></i> Education</h2>
-						<ul>
-							<li>
-							<div class="education-item">
-								<div class="education-icon">
-								<i class="fas fa-graduation-cap"></i>
-								</div>
-								<div class="education-details">
-								<h3>Master of Engineering in Robotics</h3>
-								<p class="school-name">University of Maryland, College Park</p>
-								<p class="graduation-date">May 2023</p>
-								</div>
-							</div>
-							</li>
-							<li>
-							<div class="education-item">
-								<div class="education-icon">
-								<i class="fas fa-graduation-cap"></i>
-								</div>
-								<div class="education-details">
-								<h3>Bachelor of Technology in  Mechanical Engineering</h3>
-								<p class="school-name">VNIT, India</p>
-								<p class="graduation-date">May 2019</p>
-								</div>
-							</div>
-							</li>
-						</ul>
-						</div>
-						  
-						<div class="timeline">
-							<h2>Work Experience</h2>
-							<div class="timeline-item">
-								<div class="timeline-content">
-								<h3>Robotics Software Engineer (Computer Vision)</h3>
-								<p><strong>Temple Allen Industries</strong>, Rockville, MD</p>
-								<p><em>June 2023</em> - <em>Present</em></p>
-								<ul>
-									<li>Created and integrated custom CUDA kernel functions to significantly boost vision pipeline performance, 
-										achieving substantial improvements in real-time processing and operational efficiency.</li>
-									<li>Implemented and optimized custom algorithms for the Robot Body Filter and Proximity Detection System, 
-										enhancing the robot’s ability to isolate itself from camera views and navigate safely.</li>
-									<li>Leveraged xacros and macros to create adaptable URDF models, enhancing robot configuration flexibility and accelerating development cycles.</li>
-									<li>Investigated and worked with various RGBD cameras and depth sensing technologies(Stereo, IR, ToF), selecting optimal solutions to improve the robot’s
-										environmental understanding and interaction capabilities.</li>
-								</ul>
-								</div>
-							</div>
-							<div class="timeline-item">
-								<div class="timeline-content">
-								<h3>Robotics Engineer Intern</h3>
-								<p><strong>Kick Robotics</strong>, College Park, MD</p>
-								<p><em>September 2022</em> - <em>May 2023</em></p>
-								<ul>
-									<li>Developed a python script for parsing raw GPS data and converting it to ROS2 message format.</li>
-									<li>Refined state estimation of the robot by fusing GPS data with IMU and odometry and improved loop-closure
-										accuracy using the robot localization package in ROS2. Successfully deployed and tested the same on a real robot.</li>
-								</ul>
-								</div>
-							</div>
-							<div class="timeline-item">
-								<div class="timeline-content">
-								<h3>Robotics/Machine Learning Intern</h3>
-								<p><strong>Soterya, Inc</strong>, Boston, MA</p>
-								<p><em>June 2022</em> - <em>Aug 2022</em></p>
-								<ul>
-									<li>Developed a smart robotic mattress to decrease the risk of SUDEP-major cause of death in young epilepsy patients.</li>
-									<li>Implemented Human pose detection algorithm using Machine Learning to detect the prone position from the
-										heatmap generated from the pressure sensors to reposition a patient into a recovery position.</li>
-								</ul>
-								</div>
-							</div>
-							<div class="timeline-item">
-								<div class="timeline-content">
-								<h3>Research Assistant</h3>
-								<p><strong>Gamma Lab - University of Maryland</strong>, College Park, MD</p>
-								<p><em>Feb 2022</em> - <em>May 2022</em></p>
-								<ul>
-									<li>Built packages in ROS2 for the localization (sensor fusion and state estimation), motion planning, and navigation of
-										an autonomous indoor delivery robot while working as a Research Assistant in Prof. Dinesh Manocha’s lab.</li>
-									<li>Created training environments to simulate intelligent pedestrians in Gazebo to match the real-world scenario in a
-										crowded indoor place. Designed CAD models in SolidWorks and 3D printed the parts for the robot.</li>
-								</ul>
-								</div>
-							</div>
-							<div class="timeline-item">
-								<div class="timeline-content">
-								<h3>Computer Vision Intern</h3>
-								<p><strong>Shyena Tech Yarns</strong>, Pune, India</p>
-								<p><em>March 2021</em> - <em>June 2021</em></p>
-								<ul>
-									<li>Researched and implemented deep learning models used for Human Activity Recognition (HAR) and 3D object
-										classification, segmentation, and detection on point cloud data generated by LiDar sensor.</li>
-									<li>Developed an automated machine learning pipeline for 3D object classification and segmentation.</li>
-								</ul>
-								</div>
-							</div>
-						</div>
-					</div>
+      #wrapper {
+        width: min(1100px, 92vw);
+        margin: 0 auto;
+        padding: 2rem 0 3.5rem;
+      }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>College Park, Maryland</p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="mailto:spalande@terpmail.umd.edu">spalande@terpmail.umd.edu</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--panel);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 6px 18px rgba(60, 90, 140, 0.12);
+      }
 
-			</div>
+      #intro {
+        padding: 2.4rem;
+        margin-bottom: 1.4rem;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      #intro::after {
+        display: none;
+      }
 
-	</body>
+      #intro h1 {
+        margin: 0;
+        font-size: clamp(2.1rem, 5vw, 3.4rem);
+        letter-spacing: 0.02em;
+      }
+
+      #intro p {
+        margin: 0.9rem 0 1.6rem;
+        max-width: 72ch;
+        margin-left: auto;
+        margin-right: auto;
+        color: #4f6075;
+      }
+
+      .actions {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 12px;
+        padding: 0.65rem 1rem;
+        border: 1px solid transparent;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 0.18s ease, border-color 0.2s ease, background 0.2s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .button.solo {
+        background: #edf4ff;
+        border-color: #bfd0e8;
+      }
+
+      #header {
+        margin-bottom: 1.2rem;
+        text-align: center;
+      }
+
+      #header .logo {
+        background: #edf4ff;
+        border-color: #bfd0e8;
+      }
+
+      #nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+        padding: 1rem 1.2rem;
+        position: sticky;
+        top: 0.75rem;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 6px 18px rgba(60, 90, 140, 0.12);
+      }
+
+      #nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #nav .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      #nav .links a {
+        text-decoration: none;
+        font-size: 0.95rem;
+        color: var(--muted);
+        padding: 0.45rem 0.8rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+      }
+
+      #nav .links .active a,
+      #nav .links a:hover {
+        color: var(--text);
+        border-color: #bfd0e8;
+        background: #e6f0ff;
+      }
+
+      #nav .icons {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+
+      #nav .icons a {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid #bfd0e8;
+        display: inline-grid;
+        place-items: center;
+        text-decoration: none;
+      }
+
+      #main {
+        display: grid;
+        gap: 1.2rem;
+      }
+
+      .education,
+      .timeline,
+      #footer section {
+        padding: 1.4rem;
+      }
+
+      .education h2,
+      .timeline h2 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .education ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 0.9rem;
+      }
+
+      .education-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.85rem;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 0.9rem;
+        background: rgba(255, 255, 255, 0.86);
+      }
+
+      .education-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #6f8198;
+        border: 1px solid #bfd0e8;
+      }
+
+      .education-details h3 {
+        margin: 0 0 0.2rem;
+        font-size: 1.04rem;
+      }
+
+      .education-details p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .timeline-item {
+        border-left: 2px solid #d8e3f2;
+        margin-left: 0.4rem;
+        padding-left: 1rem;
+        position: relative;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -8px;
+        top: 0.25rem;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 2px solid #bfd0e8;
+        background: var(--bg-2);
+      }
+
+      .timeline-item + .timeline-item {
+        margin-top: 1.1rem;
+      }
+
+      .timeline-content {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.86);
+      }
+
+      .timeline-content h3 {
+        margin: 0 0 0.25rem;
+      }
+
+      .timeline-content p {
+        margin: 0.15rem 0;
+      }
+
+      .timeline-content ul {
+        margin: 0.7rem 0 0;
+        padding-left: 1.1rem;
+      }
+
+      .timeline-content li {
+        margin-bottom: 0.5rem;
+      }
+
+      #footer {
+        margin-top: 1.2rem;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 1.2rem;
+      }
+
+      form .fields {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.35rem;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.78rem;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 0.7rem 0.8rem;
+        background: rgba(255, 255, 255, 0.9);
+        color: var(--text);
+        font: inherit;
+      }
+
+      input[type="submit"] {
+        width: auto;
+        border: 1px solid #bfd0e8;
+        background: #edf4ff;
+        color: var(--text);
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .split.contact {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .split.contact h3 {
+        margin: 0 0 0.4rem;
+        font-size: 0.88rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+      }
+
+      .split.contact p {
+        margin: 0;
+      }
+
+      .icons.alt {
+        display: flex;
+        gap: 0.65rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+      }
+
+      .icons.alt li {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .icons.alt li:not(:last-child)::after {
+        content: ".";
+        color: var(--muted);
+        margin-left: 0.55rem;
+        line-height: 1;
+      }
+
+      .icons.alt a {
+        text-decoration: none;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid #bfd0e8;
+        display: inline-grid;
+        place-items: center;
+      }
+
+      .panelize {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--panel);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 6px 18px rgba(60, 90, 140, 0.12);
+      }
+
+      #intro,
+      #nav,
+      .education,
+      .timeline,
+      #footer section {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--panel);
+      }
+
+      @media (max-width: 900px) {
+        #footer {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 720px) {
+        #wrapper {
+          width: min(1100px, 94vw);
+          padding: 1.2rem 0 2.2rem;
+        }
+
+        #intro,
+        #nav,
+        .education,
+        .timeline,
+        #footer section {
+          border-radius: 16px;
+        }
+
+        #intro {
+          padding: 1.3rem;
+        }
+
+        #nav {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0.95rem;
+        }
+
+        .timeline-item {
+          margin-left: 0;
+          padding-left: 0.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <nav id="nav">
+        <ul class="links">
+          <li class="active"><a href="index.html">About Me</a></li>
+          <li><a href="vision.html">Computer Vision</a></li>
+          <li><a href="ml.html">Machine Learning</a></li>
+          <li><a href="planning.html">Path Planning</a></li>
+          <li><a href="ros.html">ROS/C++</a></li>
+          <li><a href="controls.html">Controls</a></li>
+        </ul>
+        <ul class="icons">
+          <li>
+            <a href="https://www.linkedin.com/in/saurabhpalande/" class="fab fa-linkedin-in" target="_blank"
+              ><span class="label">LinkedIn</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/saurabhp369" class="fab fa-github" target="_blank"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div id="intro">
+        <h1>Saurabh Palande</h1>
+        <p>
+          I’m a Robotics Software Engineer specializing in computer vision and GPU-accelerated perception systems. My
+          work focuses on building and deploying real-time vision pipelines for industrial systems, where performance
+          and reliability are critical particularly in applications like aircraft sanding. I have hands-on experience
+          developing custom CUDA kernels, optimizing GPU workloads using profiling tools like Nsight Compute, and
+          designing perception systems that integrate RGB-D cameras, LiDAR, and embedded platforms such as NVIDIA
+          Jetson. My background spans mapping, localization, and sensor fusion, with a strong emphasis on translating
+          algorithms into efficient, real-world systems. I’m especially interested in solving challenging problems at
+          the intersection of robotics, perception, and high-performance computing.
+        </p>
+      </div>
+
+      <header id="header">
+        <a
+          href="https://drive.google.com/file/d/1UacawC8wi_Pd6nc-xgVk26mfUHO5De8U/view?usp=sharing"
+          target="_blank"
+          class="button logo primary"
+          ><i class="fas fa-download" aria-hidden="true"></i>&nbsp;Resume</a
+        >
+      </header>
+
+      <div id="main">
+        <div class="education">
+          <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+          <ul>
+            <li>
+              <div class="education-item">
+                <div class="education-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="education-details">
+                  <h3>Master of Engineering in Robotics</h3>
+                  <p class="school-name">University of Maryland, College Park</p>
+                  <p class="graduation-date">May 2023</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="education-item">
+                <div class="education-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="education-details">
+                  <h3>Bachelor of Technology in  Mechanical Engineering</h3>
+                  <p class="school-name">VNIT, India</p>
+                  <p class="graduation-date">May 2019</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="timeline">
+          <h2>Work Experience</h2>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Robotics Software Engineer (Computer Vision)</h3>
+              <p><strong>Temple Allen Industries</strong>, Rockville, MD</p>
+              <p><em>June 2023</em> - <em>Present</em></p>
+              <ul>
+                <li>
+                  Implemented custom CUDA kernel functions for a smart automated pneumatic sanding system used in aircraft
+                  hangars to significantly boost computer vision pipeline performance, achieving substantial improvements in
+                  real-time processing and operational efficiency critical to precision and safety in aircraft sanding
+                  operations.
+                </li>
+                <li>
+                  Utilized GPU profiling tools (Nsight Compute) to analyze and optimize CUDA kernels, identifying memory-bound
+                  vs compute-bound kernels, bottlenecks, and improving overall performance.
+                </li>
+                <li>
+                  Implemented and optimized custom algorithms for the Robot Body Filter and Proximity Detection System,
+                  enhancing the robot’s ability to isolate itself from camera views and navigate safely. Worked with NVIDIA
+                  Jetson platforms for deploying optimized perception algorithms in embedded systems.
+                </li>
+                <li>
+                  Investigated and worked with various RGB-D cameras and depth sensing technologies (Stereo, IR, ToF), and
+                  LiDAR systems, evaluating and selecting optimal sensors and designing camera/LiDAR placement to ensure
+                  comprehensive environmental coverage and system safety.
+                </li>
+                <li>
+                  Developed CUDA-based mapping algorithms to process and denoise point cloud data, enabling robust environment
+                  perception and improving detection reliability.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Robotics Engineer Intern</h3>
+              <p><strong>Kick Robotics</strong>, College Park, MD</p>
+              <p><em>September 2022</em> - <em>May 2023</em></p>
+              <ul>
+                <li>Developed a python script for parsing raw GPS data and converting it to ROS2 message format.</li>
+                <li>
+                  Refined state estimation of the robot by fusing GPS data with IMU and odometry and improved loop-closure
+                  accuracy using the robot localization package in ROS2. Successfully deployed and tested the same on a real
+                  robot.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Robotics/Machine Learning Intern</h3>
+              <p><strong>Soterya, Inc</strong>, Boston, MA</p>
+              <p><em>June 2022</em> - <em>Aug 2022</em></p>
+              <ul>
+                <li>
+                  Developed a smart robotic mattress to decrease the risk of SUDEP-major cause of death in young epilepsy
+                  patients.
+                </li>
+                <li>
+                  Implemented Human pose detection algorithm using Machine Learning to detect the prone position from the
+                  heatmap generated from the pressure sensors to reposition a patient into a recovery position.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Research Assistant</h3>
+              <p><strong>Gamma Lab - University of Maryland</strong>, College Park, MD</p>
+              <p><em>Feb 2022</em> - <em>May 2022</em></p>
+              <ul>
+                <li>
+                  Built packages in ROS2 for the localization (sensor fusion and state estimation), motion planning, and
+                  navigation of an autonomous indoor delivery robot while working as a Research Assistant in Prof. Dinesh
+                  Manocha’s lab.
+                </li>
+                <li>
+                  Created training environments to simulate intelligent pedestrians in Gazebo to match the real-world scenario in
+                  a crowded indoor place. Designed CAD models in SolidWorks and 3D printed the parts for the robot.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Computer Vision Intern</h3>
+              <p><strong>Shyena Tech Yarns</strong>, Pune, India</p>
+              <p><em>March 2021</em> - <em>June 2021</em></p>
+              <ul>
+                <li>
+                  Researched and implemented deep learning models used for Human Activity Recognition (HAR) and 3D object
+                  classification, segmentation, and detection on point cloud data generated by LiDar sensor.
+                </li>
+                <li>Developed an automated machine learning pipeline for 3D object classification and segmentation.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer id="footer">
+        <section>
+          <form method="post" action="#">
+            <div class="fields">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="3"></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li><input type="submit" value="Send Message" /></li>
+            </ul>
+          </form>
+        </section>
+
+        <section class="split contact">
+          <section class="alt">
+            <h3>Address</h3>
+            <p>Maryland, USA</p>
+          </section>
+          <section>
+            <h3>Email</h3>
+            <p><a href="mailto:spalande@terpmail.umd.edu">spalande@terpmail.umd.edu</a></p>
+          </section>
+          <section>
+            <h3>Social</h3>
+            <ul class="icons alt">
+              <li>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="https://github.com/saurabhp369" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/saurabhpalande/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </footer>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+  </body>
 </html>

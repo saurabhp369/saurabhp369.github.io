@@ -1,83 +1,71 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>ROS/C++ Page</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html lang="en">
+  <head>
+    <title>ROS/C++ Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <style>
+      :root { --bg-1: #f8fbff; --bg-2: #f3f8ff; --bg-3: #eef4ff; --panel:rgba(255, 255, 255, 0.82); --line:#d8e3f2; --text: #243447; --muted: #6f8198; }
+      * { box-sizing:border-box; } html,body { margin:0; padding:0; }
+      body { font-family:"Space Grotesk","Avenir Next","Segoe UI",sans-serif; color:var(--text); background: linear-gradient(160deg, #f8fbff 0%, #f3f8ff 55%, #eef4ff 100%); min-height:100vh; line-height:1.6; }
+      a { color:inherit; } .label { display:none; }
+      #wrapper { width:min(1100px,92vw); margin:0 auto; padding:1.2rem 0 3rem; }
+      #nav { display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:1.2rem; padding:1rem 1.2rem; border:1px solid var(--line); border-radius:20px; background:var(--panel); position:sticky; top:.75rem; z-index:1000;
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 6px 18px rgba(60, 90, 140, 0.12); }
+      #nav ul { list-style:none; padding:0; margin:0; }
+      #nav .links { display:flex; flex-wrap:wrap; gap:.5rem; }
+      #nav .links a { text-decoration:none; font-size:.95rem; color:var(--muted); padding:.45rem .8rem; border-radius:999px; border:1px solid transparent;
+        font-weight: 700; }
+      #nav .links .active a, #nav .links a:hover { color:var(--text); border-color:#bfd0e8; background:#e6f0ff; }
+      #nav .icons { display:flex; align-items:center; gap:.7rem; }
+      #nav .icons a { width:36px; height:36px; border-radius:50%; border:1px solid #bfd0e8; display:inline-grid; place-items:center; text-decoration:none; }
+      #main { display:grid; gap:1rem; }
+      .card { border:1px solid var(--line); border-radius:18px; background:var(--panel); padding:1.2rem; }
+      .card h2 { margin-top:0; text-align:center; } .card p { color: #4f6075; }
+      .image { display:block; border-radius:12px; overflow:hidden; margin:.9rem 0; }
+      .image img { width:100%; height:auto; display:block; }
+      .button { display:inline-flex; align-items:center; border-radius:12px; padding:.62rem .95rem; border:1px solid #bfd0e8; text-decoration:none; font-weight:600; background:#edf4ff; }
+      .actions { margin-top:.8rem; display:flex; justify-content:center; gap:.6rem; flex-wrap:wrap; }
+      @media (max-width:720px) { #nav { flex-direction:column; align-items:flex-start; } }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <nav id="nav">
+        <ul class="links">
+          <li><a href="index.html">About Me</a></li>
+          <li><a href="vision.html">Computer Vision</a></li>
+          <li><a href="ml.html">Machine Learning</a></li>
+          <li><a href="planning.html">Path Planning</a></li>
+          <li class="active"><a href="ros.html">ROS/C++</a></li>
+          <li><a href="controls.html">Controls</a></li>
+        </ul>
+        <ul class="icons">
+          <li><a href="https://www.linkedin.com/in/saurabhpalande/" class="fab fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+          <li><a href="https://github.com/saurabhp369" class="fab fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+        </ul>
+      </nav>
 
-		<!-- Wrapper -->
-		<div id="wrapper" class="fade-in">
-
-			<!-- Intro -->
-			<div id="intro">
-				<h1>Saurabh Palande</h1>
-				<p>I am a graduate student at the University of Maryland, College Park, pursuing my Professional Master’s 
-					degree in Robotics (M. Eng. Robotics) and expecting to graduate by May 2023. My expertise lies in 
-					Computer Vision, Autonomous navigation, Robotic Manipulators, and Industrial Automation<br/>
-				   </p>
-				<ul class="actions">
-					<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-				</ul>
-			</div>
-
-		<!-- Header -->
-			<header id="header">
-				<a href="" target="_blank" class="logo primary icon solid fa-download">Resume</a>
-			</header>
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li ><a href="index.html">About Me</a></li>
-							<li><a href="vision.html">Computer Vision</a></li>
-							<li ><a href="ml.html">Machine Learning</a></li>
-							<li><a href="planning.html">Path Planning</a></li>
-							<li class="active" ><a href="ros.html">ROS/C++</a></li>
-							<li><a href="controls.html">Controls</a></li>
-						</ul>
-						<ul class="icons">
-							<!-- <li><a href="#" class="button primary icon solid fa-download">Resume</a></li> -->
-							<li><a href="https://www.linkedin.com/in/saurabhpalande/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/saurabhp369" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-				<div id="main">
-							
-					<!-- Featured Post -->
-						<article class="post featured">
-							
-							<header class="major">
-								
-								<h2><a href="#">Urban Search and Rescue Robot</a></h2>
-								<p>The explorer robot explores the unknown environment and builds a map of the area and places markers where victims are located. The follower uses the information to go to the target locations and rescue the victims.</p>
-							</header>
-							<a href="#" class="image main"><img src="images/usar.png" alt="" /></a>
-							<ul class="actions special">
-								<li><a href="https://github.com/saurabhp369/Search_And_Rescue_Gazebo" class="button large">View Project</a></li>
-							</ul>
-							<ul class="icons alt">
-								<li><a href="https://docs.google.com/presentation/d/1AxOe_Uaa-L5HbRJRf5A2VwD0uNeHmw7pBqpmfYeuIUs/edit?usp=share_link" class=""><span class="label">Slides</span></a></li>
-							</ul>
-						</article>
-
-
-				</div>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+      <div id="main">
+        <article class="card">
+          <h2>Urban Search and Rescue Robot</h2>
+          <p>The explorer robot explores the unknown environment and builds a map of the area and places markers where victims are located. The follower uses the information to go to the target locations and rescue the victims.</p>
+          <a href="#" class="image"><img src="images/usar.png" alt="Urban Search and Rescue Robot" /></a>
+          <div class="actions">
+            <a href="https://github.com/saurabhp369/Search_And_Rescue_Gazebo" class="button">View Project</a>
+            <a href="https://docs.google.com/presentation/d/1AxOe_Uaa-L5HbRJRf5A2VwD0uNeHmw7pBqpmfYeuIUs/edit?usp=share_link" class="button">Slides</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
 </html>

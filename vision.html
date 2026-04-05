@@ -1,181 +1,278 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Vision Page</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html lang="en">
+  <head>
+    <title>Vision Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <style>
+      :root {
+        --bg-1: #f8fbff;
+        --bg-2: #f3f8ff;
+        --bg-3: #eef4ff;
+        --panel: rgba(255, 255, 255, 0.82);
+        --line: #d8e3f2;
+        --text: #243447;
+        --muted: #6f8198;
+      }
 
-		<!-- Wrapper -->
-		<div id="wrapper" class="fade-in">
+      * {
+        box-sizing: border-box;
+      }
 
-			<!-- Intro -->
-			<div id="intro">
-				<h1>Saurabh Palande</h1>
-				<p>I am a graduate student at the University of Maryland, College Park, pursuing my Professional Master’s 
-					degree in Robotics (M. Eng. Robotics) and expecting to graduate by May 2023. My expertise lies in 
-					Computer Vision, Autonomous navigation, Robotic Manipulators, and Industrial Automation<br/>
-				   </p>
-				<ul class="actions">
-					<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-				</ul>
-			</div>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
-		<!-- Header -->
-			<header id="header">
-				<a href="https://drive.google.com/file/d/181HIZe7yaBixIs6VdSQa10L0iqOWFUnG/view?usp=share_link" target="_blank" class="logo primary icon solid fa-download">Resume</a>
-			</header>
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li ><a href="index.html">About Me</a></li>
-							<li class="active"><a href="vision.html">Computer Vision</a></li>
-							<li ><a href="ml.html">Machine Learning</a></li>
-							<li><a href="planning.html">Path Planning</a></li>
-							<li><a href="ros.html">ROS/C++</a></li>
-							<li><a href="controls.html">Controls</a></li>
-						</ul>
-						<ul class="icons">
-							<!-- <li><a href="#" class="button primary icon solid fa-download">Resume</a></li> -->
-							<li><a href="https://www.linkedin.com/in/saurabhpalande/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/saurabhp369" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+      body {
+        font-family: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+        color: var(--text);
+        background: linear-gradient(160deg, #f8fbff 0%, #f3f8ff 55%, #eef4ff 100%);
+        min-height: 100vh;
+        line-height: 1.6;
+      }
 
-				<!-- Main -->
-				<div id="main">
-							
-					<!-- Featured Post -->
-						<article class="post featured">
-							
-							<header class="major">
+      a {
+        color: inherit;
+      }
 
-								<h2>Structure from Motion (3D scene reconstruction)</h2>
-								<p>Reconstructed a 3D scene and simultaneously obtained the camera poses of a monocular camera w.r.t. the given scene (multi-view geometry) by using traditional methods like Feature Matching and Outlier rejection using RANSAC, linear and non-linear triangulation, Perspective-n-Point and Bundle Adjustment in Python.
-									Estimated depth and pose from a sequence of images by using an unsupervised learning method - SFM learner.</p>
-							</header>
-							<a href="#" class="image main"><img src="images/sfm.png" alt="" /></a>
-							<ul class="actions special">
-								<li><a href="https://github.com/saurabhp369/Structure_from_Motion" class="button large">View Project</a></li>
-							</ul>
-							<ul class="icons alt">
-								<li><a href="https://docs.google.com/presentation/d/13DkuTVMrpup39XmIydWc6RU4qARghhLVTJPc2JJPyeA/edit?usp=share_link" class="fas fa-presentation"><span class="label">Slides</span></a></li>
-							</ul>
-						</article>
+      .label {
+        display: none;
+      }
 
-					<!-- Posts -->
-						<section class="posts">
-							<article>
-								<header>
-									<h2>Face Swap</h2>
-								</header>
-								<a href="#" class="image fit"><img src="images/face_swap.jpg" alt="" /></a>
-								<p>Swapped faces in a video using traditional (Delaunay Triangulation and Thin Plate Spline) and deep learning
-									(Position Map Regression Network) methods</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/saurabhp369/Face_swap" class="button large">View Project</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<h2><a href="#">Depth estimation using Stereo Camera (depth from image)</a></h2>
-								</header>
-								<a href="#" class="image fit"><img src="images/depth.jpg" alt="" /></a>
-								<p>Estimated pixel-wise depth by comparing the information about a scene from 2 vantage points and examining
-									relative position of objects</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/saurabhp369/stereo_depth_estimation" class="button large">View Project</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<h2><a href="#">Human pose Estimation using OpenPose</a></h2>
-								</header>
-								<a href="#" class="image fit"><img src="images/vis_1.jpg" alt="" /></a>
-								<p>Implemented OpenPose to detect multi-person 2D human poses in real-time and used the detected poses to control
-									the motion of a physical robot (built from scratch) using Jetson Nano and Arduino.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/saurabhp369/Pose-Estimation-Gesture-operated-mobile-robot" class="button large">View Project</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<h2><a href="#">Zhang's Camera Calibration</a></h2>
-								</header>
-								<a href="#" class="image fit"><img src="images/calib.jpg" alt="" /></a>
-								<p>Estimated the camera calibration matrix (K) using Zhang’s calibration method with non-linear optimization.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/saurabhp369/Zhang_Camera_Calibration" class="button">View Project</a></li>
-								</ul>
-								<!-- <ul class="icons alt">
-									<li><a href="https://drive.google.com/file/d/1umWx7jV6fi6Mz5_9bqCDE_ltdA4mLf_9/view?usp=share_link" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
-								</ul> -->
-							</article>
-							<article>
-								<header>
-									<h2><a href="#">AR tag detection and Homography estimation.</a></h2>
-								</header>
-								<a href="#" class="image fit"><img src="images/cube.gif" alt="" /></a>
-								<p>Implemented an algorithm to detect and track a custom AR Tag, warped a custom image with inverse warping, and
-									placed a 3D cube on it without using OpenCV library inbuilt functions.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/saurabhp369/ARtag_detection_and_Homography" class="button">View Project</a></li>
-								</ul>
-								<!-- <ul class="icons alt">
-									<li><a href="https://drive.google.com/file/d/1dXL-k5LvM3gwg3nyIS4t1nSouRdGymeI/view?usp=sharing" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
-								</ul> -->
-							</article>
-							<article>
-								<header>
-									<h2><a href="#">Lane Detection and Turn prediction</a></h2>
-								</header>
-								<a href="#" class="image fit"><img src="images/lane2.gif" alt="" /></a>
-								<p>Analyzed a video taken by a vehicle front camera and developed an algorithm to recognize the road lanes, the lane
-									curvature and predict the turn.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/saurabhp369/Lane_Detection" class="button">View Project</a></li>
-								</ul>
-								<!-- <ul class="icons alt">
-									<li><a href="https://drive.google.com/file/d/1umWx7jV6fi6Mz5_9bqCDE_ltdA4mLf_9/view?usp=share_link" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
-								</ul> -->
-							</article>
-							<article>
-								<header>
-									<h2><a href="#">Pb-Lite Edge detection algorithm.</a></h2>
-								</header>
-								<a href="#" class="image fit"><img src="images/pblite.jpg" alt="" /></a>
-								<p>Detected edges using probability of boundary detection algorithm by using DoG, Gabor, and LM filter banks.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/saurabhp369/pb_lite_edge_detection" class="button">View Project</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<h2><a href="#">K Means Image Segmentation.</a></h2>
-								</header>
-								<a href="#" class="image fit"><img src="images/kmeans.jpg" alt="" /></a>
-								<p>Performed Image segmentation using K-Means clustering algorithm.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/saurabhp369/Kmeans_Image_segmentation" class="button">View Project</a></li>
-								</ul>
-							</article>
-						</section>
+      #wrapper {
+        width: min(1100px, 92vw);
+        margin: 0 auto;
+        padding: 1.2rem 0 3rem;
+      }
 
-				</div>
+      #nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+        padding: 1rem 1.2rem;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--panel);
+        position: sticky;
+        top: 0.75rem;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 6px 18px rgba(60, 90, 140, 0.12);
+      }
 
-		</div>
+      #nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      #nav .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
 
-	</body>
+      #nav .links a {
+        text-decoration: none;
+        font-size: 0.95rem;
+        color: var(--muted);
+        padding: 0.45rem 0.8rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+      }
+
+      #nav .links .active a,
+      #nav .links a:hover {
+        color: var(--text);
+        border-color: #bfd0e8;
+        background: #e6f0ff;
+      }
+
+      #nav .icons {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+
+      #nav .icons a {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid #bfd0e8;
+        display: inline-grid;
+        place-items: center;
+        text-decoration: none;
+      }
+
+      #main {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--panel);
+        padding: 1.2rem;
+      }
+
+      .card h2 {
+        margin-top: 0;
+        text-align: center;
+      }
+
+      .card p {
+        color: #4f6075;
+      }
+
+      .image {
+        display: block;
+        border-radius: 12px;
+        overflow: hidden;
+        margin: 0.9rem 0;
+      }
+
+      .image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 12px;
+        padding: 0.62rem 0.95rem;
+        border: 1px solid #bfd0e8;
+        text-decoration: none;
+        font-weight: 600;
+        background: #edf4ff;
+      }
+
+      .actions {
+        margin-top: 0.8rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 900px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 720px) {
+        #nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <nav id="nav">
+        <ul class="links">
+          <li><a href="index.html">About Me</a></li>
+          <li class="active"><a href="vision.html">Computer Vision</a></li>
+          <li><a href="ml.html">Machine Learning</a></li>
+          <li><a href="planning.html">Path Planning</a></li>
+          <li><a href="ros.html">ROS/C++</a></li>
+          <li><a href="controls.html">Controls</a></li>
+        </ul>
+        <ul class="icons">
+          <li><a href="https://www.linkedin.com/in/saurabhpalande/" class="fab fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+          <li><a href="https://github.com/saurabhp369" class="fab fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+        </ul>
+      </nav>
+
+      <div id="main">
+        <article class="card">
+          <h2>Structure from Motion (3D scene reconstruction)</h2>
+          <p>Reconstructed a 3D scene and simultaneously obtained the camera poses of a monocular camera w.r.t. the given scene (multi-view geometry) by using traditional methods like Feature Matching and Outlier rejection using RANSAC, linear and non-linear triangulation, Perspective-n-Point and Bundle Adjustment in Python. Estimated depth and pose from a sequence of images by using an unsupervised learning method - SFM learner.</p>
+          <a href="#" class="image"><img src="images/sfm.png" alt="Structure from Motion" /></a>
+          <div class="actions"><a href="https://github.com/saurabhp369/Structure_from_Motion" class="button">View Project</a></div>
+        </article>
+
+        <section class="grid">
+          <article class="card">
+            <h2>Face Swap</h2>
+            <a href="#" class="image"><img src="images/face_swap.jpg" alt="Face Swap" /></a>
+            <p>Swapped faces in a video using traditional (Delaunay Triangulation and Thin Plate Spline) and deep learning (Position Map Regression Network) methods</p>
+            <div class="actions"><a href="https://github.com/saurabhp369/Face_swap" class="button">View Project</a></div>
+          </article>
+
+          <article class="card">
+            <h2>Depth estimation using Stereo Camera (depth from image)</h2>
+            <a href="#" class="image"><img src="images/depth.jpg" alt="Depth estimation" /></a>
+            <p>Estimated pixel-wise depth by comparing the information about a scene from 2 vantage points and examining relative position of objects</p>
+            <div class="actions"><a href="https://github.com/saurabhp369/stereo_depth_estimation" class="button">View Project</a></div>
+          </article>
+
+          <article class="card">
+            <h2>Human pose Estimation using OpenPose</h2>
+            <a href="#" class="image"><img src="images/vis_1.jpg" alt="Human pose estimation" /></a>
+            <p>Implemented OpenPose to detect multi-person 2D human poses in real-time and used the detected poses to control the motion of a physical robot (built from scratch) using Jetson Nano and Arduino.</p>
+            <div class="actions"><a href="https://github.com/saurabhp369/Pose-Estimation-Gesture-operated-mobile-robot" class="button">View Project</a></div>
+          </article>
+
+          <article class="card">
+            <h2>Zhang's Camera Calibration</h2>
+            <a href="#" class="image"><img src="images/calib.jpg" alt="Zhang camera calibration" /></a>
+            <p>Estimated the camera calibration matrix (K) using Zhang’s calibration method with non-linear optimization.</p>
+            <div class="actions"><a href="https://github.com/saurabhp369/Zhang_Camera_Calibration" class="button">View Project</a></div>
+          </article>
+
+          <article class="card">
+            <h2>AR tag detection and Homography estimation.</h2>
+            <a href="#" class="image"><img src="images/cube.gif" alt="AR tag detection" /></a>
+            <p>Implemented an algorithm to detect and track a custom AR Tag, warped a custom image with inverse warping, and placed a 3D cube on it without using OpenCV library inbuilt functions.</p>
+            <div class="actions"><a href="https://github.com/saurabhp369/ARtag_detection_and_Homography" class="button">View Project</a></div>
+          </article>
+
+          <article class="card">
+            <h2>Lane Detection and Turn prediction</h2>
+            <a href="#" class="image"><img src="images/lane2.gif" alt="Lane detection" /></a>
+            <p>Analyzed a video taken by a vehicle front camera and developed an algorithm to recognize the road lanes, the lane curvature and predict the turn.</p>
+            <div class="actions"><a href="https://github.com/saurabhp369/Lane_Detection" class="button">View Project</a></div>
+          </article>
+
+          <article class="card">
+            <h2>Pb-Lite Edge detection algorithm.</h2>
+            <a href="#" class="image"><img src="images/pblite.jpg" alt="Pb-Lite edge detection" /></a>
+            <p>Detected edges using probability of boundary detection algorithm by using DoG, Gabor, and LM filter banks.</p>
+            <div class="actions"><a href="https://github.com/saurabhp369/pb_lite_edge_detection" class="button">View Project</a></div>
+          </article>
+
+          <article class="card">
+            <h2>K Means Image Segmentation.</h2>
+            <a href="#" class="image"><img src="images/kmeans.jpg" alt="K Means segmentation" /></a>
+            <p>Performed Image segmentation using K-Means clustering algorithm.</p>
+            <div class="actions"><a href="https://github.com/saurabhp369/Kmeans_Image_segmentation" class="button">View Project</a></div>
+          </article>
+        </section>
+      </div>
+    </div>
+  </body>
 </html>
